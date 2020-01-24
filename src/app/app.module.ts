@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainAnimationComponent } from './main-animation/main-animation.component';
+import { AboutSectionComponent } from './about-section/about-section.component';
+import { ProfileSectionComponent } from './profile-section/profile-section.component';
+import { ProjectSectionComponent } from './project-section/project-section.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainAnimationComponent,
+    AboutSectionComponent,
+    ProfileSectionComponent,
+    ProjectSectionComponent
   ],
   imports: [
     BrowserModule,
