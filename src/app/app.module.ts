@@ -7,6 +7,7 @@ import { MainAnimationComponent } from './main-animation/main-animation.componen
 import { AboutSectionComponent } from './about-section/about-section.component';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { ProjectSectionComponent } from './project-section/project-section.component';
+import { ProjectDescriptionComponent } from './project-description/project-description.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProjectSectionComponent } from './project-section/project-section.compo
     MainAnimationComponent,
     AboutSectionComponent,
     ProfileSectionComponent,
-    ProjectSectionComponent
+    ProjectSectionComponent,
+    ProjectDescriptionComponent
   ],
   imports: [
     BrowserModule,

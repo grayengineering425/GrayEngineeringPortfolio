@@ -158,32 +158,90 @@
   display:          flex;
   flex-direction:   row;
   justify-content:  center;
-  padding:          10px;
+  padding:          15px;
   padding-top:      70px;
   padding-bottom:   70px;
+  height:           150px;
+}
+
+.certification-underline
+{
+  margin:           0 auto;
+  height:           2px;
+  width:            145px;
+  background-color: black;
 }
 
 .certification
 {
-  margin: 10px;
+  margin: 15px;
 }
 
-.certification-top {
+.certification-top
+{
   width:          0;
   border-bottom:  30px solid #6C6;
   border-left:    52px solid transparent;
   border-right:   52px solid transparent;
+
+  transition: all 0.3s ease;
 }
 
-.certification-middle {
+.certification-middle
+{
   width:            104px;
   height:           60px;
   background-color: #6C6;
+
+  transition: all 0.3s ease;
 }
 
-.certification-bottom {
+#artificial-intelligence
+{
+  content: url('./assets/artificial-intelligence.svg');
+}
+
+#machine-learning
+{
+  content: url('./assets/machine-learning.svg');
+}
+
+#cloud
+{
+  content: url('./assets/cloud.svg');
+}
+
+#greedy
+{
+  content: url('./assets/greedy.svg');
+}
+
+.certification-bottom
+{
   width:        0;
   border-top:   30px solid #6C6;
   border-left:  52px solid transparent;
   border-right: 52px solid transparent;
+
+  transition: all 0.3s ease;
+}
+
+.certification:hover .certification-top
+{
+  border-bottom:  40px solid #6C6;
+  border-left:    62px solid transparent;
+  border-right:   62px solid transparent;
+}
+
+.certification:hover .certification-middle
+{
+  width:            124px;
+  height:           70px;
+}
+
+.certification:hover .certification-bottom
+{
+  border-top:   40px solid #6C6;
+  border-left:  62px solid transparent;
+  border-right: 62px solid transparent;
 }
