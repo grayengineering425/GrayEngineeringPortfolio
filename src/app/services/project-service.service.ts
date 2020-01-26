@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { forEach } from '@angular/router/src/utils/collection';
+import { Injectable     } from '@angular/core';
+import { forEach        } from '@angular/router/src/utils/collection';
 
 @Injectable
 ({
