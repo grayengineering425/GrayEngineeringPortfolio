@@ -27,6 +27,22 @@
   background-color: #944dff;
   display:          inline-block;
   color:            white;
+  cursor:           pointer;
+  transition:       all 0.8s ease;
+}
+
+.contact-container:hover
+{
+  transform: rotate(360deg);
+}
+
+.return-to-top
+{
+  width: 40px;
+  height: 60px;
+  background-color: #ff3399;
+  margin-left: 48vw;
+  margin-top: -20px;
 }
 
 .footer

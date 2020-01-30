@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as smoothscroll from "smoothscroll-polyfill";
+
 @Component({
   selector: 'app-main-animation',
   templateUrl: './main-animation.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainAnimationComponent implements OnInit {
 
-  constructor() { }
+  constructor() { smoothscroll.polyfill(); }
 
   ngOnInit() {
+  }
+
+  public scrollMain(): void
+  {
+      document.querySelector('.about-section').scrollIntoView({ behavior: 'smooth' });
   }
 
 }

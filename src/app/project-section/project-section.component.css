@@ -22,8 +22,9 @@
 {
   max-width:  800px;
   margin:     0 auto;
-  height:     100vh;
   text-align: center;
+  overflow:   hidden;
+  margin-bottom: 10vh;
 }
 
 .project-header-underline
@@ -49,11 +50,14 @@
 
 .project-item
 {
-  margin-top:       0.5%;
-  transition:       all 1s 0s;
-  opacity:          0.0;
-  flex:             0 1 250px;
-  margin:           5px;
+  margin-top:         0.5%;
+  transition:         all 1s 0s;
+  opacity:            0.0;
+  flex:               0 1 250px;
+  margin:             5px;
+  background-color:   #D2D2D2;
+  background-size:    100% 100%;
+  background-repeat:  no-repeat;
 }
 
 .project-item::before

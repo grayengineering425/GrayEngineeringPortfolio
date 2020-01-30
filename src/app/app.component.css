@@ -4,3 +4,55 @@
   padding:      0;
   font-family:  "Arial Black", Gadget, sans-serif;
 }
+
+.navigation
+{
+  text-align: center;
+}
+
+.navigation-bar
+{
+  list-style-type:  none;
+  margin:           0;
+  padding:          0;
+  overflow:         hidden;
+  background-color: black;
+  width:            100%;
+  z-index:          1;
+}
+
+.navigation-bar-content
+{
+  display:inline-block;
+}
+
+.navigation-bar-content a
+{
+  display:          block;
+  color:            white;
+  text-align:       center;
+  padding:          14px 16px;
+  text-decoration:  none;
+}
+
+.navigation-underline
+{
+	height:           3px;
+	background-color: transparent;
+	width:            0%;
+	transition:       width 0.3s, background-color 0.5s;
+	margin:           0 auto;
+}
+
+.navigation-bar-content:hover .navigation-underline
+{
+	background-color: white;
+	width:            90%;
+}
+
+.sticky
+{
+  position: fixed;
+  top:      0;
+  width:    100%;
+}

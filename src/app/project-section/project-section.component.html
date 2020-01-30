@@ -4,34 +4,9 @@
     <div class="project-header-underline"></div>
   </div>
   <ul class="project-grid">
-    <li class="project-item top" style="background-color: red">
-      <div class="project-item-preview" (click)="onItemClicked(0)">
-        <p class="centered">item 1</p>
-      </div>
-    </li>
-    <li class="project-item top" style="background-color: blue">
-      <div class="project-item-preview"  (click)="onItemClicked(1)">
-        <p class="centered">item 2</p>
-      </div>
-    </li>
-    <li class="project-item top" style="background-color: pink">
-      <div class="project-item-preview" (click)="onItemClicked(2)">
-        <p class="centered">item 3</p>
-      </div>
-    </li>
-    <li class="project-item bottom" style="background-color: purple">
-      <div class="project-item-preview" (click)="onItemClicked(3)">
-        <p class="centered">item 4</p>
-      </div>
-    </li>
-    <li class="project-item bottom" style="background-color: orange">
-      <div class="project-item-preview" (click)="onItemClicked(4)">
-        <p class="centered">item 5</p>
-      </div>
-    </li>
-    <li class="project-item bottom" style="background-color: green">
-      <div class="project-item-preview" (click)="onItemClicked(5)">
-        <p class="centered">item 6</p>
+    <li class="project-item top" *ngFor="let project of projects; let i = index" [ngStyle]="{'background-image': 'url(' + project.imagePath + ')'}">
+      <div class="project-item-preview" (click)="onItemClicked(i)">
+        <p class="centered">{{project.title}}</p>
       </div>
     </li>
   </ul>

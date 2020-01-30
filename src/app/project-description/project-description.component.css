@@ -44,14 +44,14 @@
 
 .project-image
 {
-  height:           70%;
+  height:           60%;
   width:            100%;
-  background-color: gray;
+  background-color: #D2D2D2;
 }
 
 .project-summary
 {
-  height:           30%;
+  height:           40%;
   width:            100%;
   background-color: white;
 }

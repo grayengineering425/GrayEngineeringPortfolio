@@ -39,32 +39,32 @@ export class ProjectService
     this.projects   = new Array<Project>();
 
     var summary0    = "Created a face tracking system using Tensorflow and python for use in a home security/automation system.";
-    var imagePath0  = "https://www.techryn.com/wp-content/uploads/2019/10/Artificial-Intelligence.jpg";
+    var imagePath0  = "assets/vision.svg";
     var link0       = "https://github.com/grayengineering425/HomeAiAutomation/tree/master/Experimental/face_tracking";
     var p0          = new Project("Face Tracking AI", summary0, imagePath0, link0);
 
     var summary1    = "Created a facial recognition system using Tensorflow and python for use in a home security/automation system.";
-    var imagePath1  = "";
+    var imagePath1  = "assets/facial-recognition.svg";
     var link1       = "https://github.com/grayengineering425/HomeAiAutomation/tree/master/Experimental/facial_recognition";
     var p1          = new Project("Facial Recognition AI", summary1, imagePath1, link1);
 
     var summary2    = "Created a voice recognition system using Tensorflow and python for use in a home security/automation system.";
-    var imagePath2  = "";
+    var imagePath2  = "assets/voice-recognition.svg";
     var link2       = "https://github.com/grayengineering425/HomeAiAutomation/tree/master/Experimental/keyword_recognition";
     var p2          = new Project("Keyword Recognition", summary2, imagePath2, link2);
 
     var summary3    = "Worked as a developer on Philips Intrasight. A ground up rebuild of Philips coronary tool suite for use in modern Catheter Labs.";
-    var imagePath3  = "";
+    var imagePath3  = "assets/intrasight.svg";
     var link3       = "https://www.usa.philips.com/healthcare/resources/landing/intrasight";
     var p3          = new Project("Philips Intrasight", summary3, imagePath3, link3);
 
     var summary4    = "Created a home automation system using Angular, Python, and C++. Used artificial intelligence to automate household tasks and install a modern security system in my house.";
-    var imagePath4  = "";
+    var imagePath4  = "assets/home-automation.svg";
     var link4       = "https://github.com/grayengineering425/HomeAiAutomation";
     var p4          = new Project("Home Automation", summary4, imagePath4, link4);
 
     var summary5    = "Created this website! Check out the source code!";
-    var imagePath5  = "";
+    var imagePath5  = "assets/website.svg";
     var link5       = "https://github.com/grayengineering425/GrayEngineeringPortfolio";
     var p5          = new Project("Personal Portfolio", summary5, imagePath5, link5);
 
@@ -81,6 +81,11 @@ export class ProjectService
     if (index < 0 || index >= this.projects.length) return null;
 
     return this.projects[index];
+  }
+
+  public getProjects(): Array<Project>
+  {
+    return this.projects;
   }
 
   public selectProject(index: number): void

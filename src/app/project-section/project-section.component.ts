@@ -1,6 +1,6 @@
-import { ProjectService } from '../services/project-service.service';
+import { ProjectService, Project } from '../services/project-service.service';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-project-section',
@@ -12,22 +12,27 @@ export class ProjectSectionComponent implements OnInit {
   private projectItems  : any;
   private mediaQuery    : any;
   private projectService: ProjectService;
+  private projects      : Array<Project>;
 
-  constructor()
+  constructor(private ref: ChangeDetectorRef)
   {
   }
 
   ngOnInit()
   {
+    console.log("init");
     this.projectGrid  = document.getElementsByClassName('project-grid' )[0];
     this.projectItems = document.getElementsByClassName('project-item'    ) as HTMLCollectionOf<HTMLElement>;
 
     this.mediaQuery   = window.matchMedia( "(max-device-width: 1440px)");
+
   }
 
   public setProjectService(service: ProjectService)
   {
     this.projectService = service;
+    this.projects       = this.projectService.getProjects();
+    this.ref.detectChanges();
   }
 
   public onScroll(): void
@@ -53,6 +58,7 @@ export class ProjectSectionComponent implements OnInit {
 
   public onItemClicked(index: number): void
   {
+    console.log(index);
     this.projectService.selectProject(index);
   }
 }

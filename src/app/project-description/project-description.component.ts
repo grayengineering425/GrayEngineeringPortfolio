@@ -46,10 +46,10 @@ export class ProjectDescriptionComponent extends ProjectServiceObserver implemen
     var image = document.getElementsByClassName("project-image")[0] as HTMLElement;
     image.style.content = "url('" + this.curProject.imagePath + "')";
 
-    console.log(this.curProject.title);
+    console.log(this.curProject.imagePath);
 
     document.getElementsByClassName("title")  [0].innerHTML = this.curProject.title;
-    document.getElementsByClassName("summary")[0].innerHTML = this.curProject.summary;
+    document.getElementsByClassName("summary")[0].innerHTML = this.curProject.summary + "<br/><br/><a href=\"" + this.curProject.link + "\" target=\"_blank\">Check it out</a>";
   }
 
   public onProjectDeselected(): void
