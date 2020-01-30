@@ -1,4 +1,4 @@
-import { ProjectService, ProjectServiceObserver } from '../services/project-service.service';
+import { ProjectService, ProjectServiceObserver, Project } from '../services/project-service.service';
 
 import { Component, OnInit, ViewChild } from '@angular/core';
 
@@ -12,6 +12,7 @@ export class ProjectDescriptionComponent extends ProjectServiceObserver implemen
   private projectService  : ProjectService;
   private screenCover     : any;
   private curProjectIndex : number;
+  private curProject      : Project;
 
   @ViewChild('close') close;
   @ViewChild('prev' ) prev;
@@ -39,11 +40,16 @@ export class ProjectDescriptionComponent extends ProjectServiceObserver implemen
     this.screenCover.classList.add    ('screen-cover-visible'  );
     this.screenCover.classList.remove ('screen-cover-invisible');
 
-    this.close.nativeElement.style.color = "white";
-    this.prev .nativeElement.style.color = "white";
-    this.next .nativeElement.style.color = "white";
+    this.curProjectIndex  = index;
+    this.curProject       = this.projectService.getProject(index);
 
-    this.curProjectIndex = index;
+    var image = document.getElementsByClassName("project-image")[0] as HTMLElement;
+    image.style.content = "url('" + this.curProject.imagePath + "')";
+
+    console.log(this.curProject.title);
+
+    document.getElementsByClassName("title")  [0].innerHTML = this.curProject.title;
+    document.getElementsByClassName("summary")[0].innerHTML = this.curProject.summary;
   }
 
   public onProjectDeselected(): void
@@ -56,10 +62,16 @@ export class ProjectDescriptionComponent extends ProjectServiceObserver implemen
     this.screenCover.classList.remove ('screen-cover-visible'  );
     this.screenCover.classList.add    ('screen-cover-invisible');
 
-    this.close.nativeElement.style.color = "transparent";
-    this.prev .nativeElement.style.color = "transparent";
-    this.next .nativeElement.style.color = "transparent";
-
     this.curProjectIndex = -1;
+  }
+
+  public selectNextProject(): void
+  {
+    this.projectService.selectProject(this.curProjectIndex + 1)
+  }
+
+  public selectPrevProject(): void
+  {
+    this.projectService.selectProject(this.curProjectIndex - 1)
   }
 }

@@ -9,6 +9,7 @@ import { AboutSectionComponent } from './about-section/about-section.component';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { ProjectSectionComponent } from './project-section/project-section.component';
 import { ProjectDescriptionComponent } from './project-description/project-description.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProjectDescriptionComponent } from './project-description/project-descr
     AboutSectionComponent,
     ProfileSectionComponent,
     ProjectSectionComponent,
-    ProjectDescriptionComponent
+    ProjectDescriptionComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

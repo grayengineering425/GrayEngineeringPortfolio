@@ -1,0 +1,51 @@
+.top-contact-page
+{
+  position: relative;
+  width:          0;
+  height:         0;
+  border-left:    50vw solid transparent;
+  border-right:   50vw solid transparent;
+  border-bottom:  100px solid #EBEBEB;
+}
+
+.main-contact-page
+{
+  width:            100%;
+  height:           350px;
+  background-color: #EBEBEB;
+  text-align:       center;
+  color:            #ff3399;
+}
+
+.contact-container
+{
+  margin-top:       100px;
+  margin-left:      20px;
+  margin-right:     20px;
+  height:           75px;
+  width:            75px;
+  background-color: #944dff;
+  display:          inline-block;
+  color:            white;
+}
+
+.footer
+{
+  width:            100%;
+  height:           200px;
+  background-color: #D2D2D2;
+}
+
+.author-info
+{
+  position:   relative;
+  left:       50%;
+  top:        50%;
+  transform:  translate(-50%, -50%);
+  text-align: center;
+}
+
+.name
+{
+  color:#ff3399;
+}
