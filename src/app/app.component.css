@@ -50,6 +50,12 @@
 	width:            90%;
 }
 
+.navigation-underline-selected
+{
+	background-color: white;
+	width:            90%;
+}
+
 .sticky
 {
   position: fixed;

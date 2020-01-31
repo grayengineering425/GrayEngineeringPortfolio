@@ -9,14 +9,17 @@ import * as smoothscroll from "smoothscroll-polyfill";
 })
 export class MainAnimationComponent implements OnInit {
 
-  constructor() { smoothscroll.polyfill(); }
+  constructor()
+  {
+    smoothscroll.polyfill();
+  }
 
-  ngOnInit() {
+  ngOnInit()
+  {
   }
 
   public scrollMain(): void
   {
-      document.querySelector('.about-section').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('.navigation-bar').scrollIntoView({ behavior: 'smooth' });
   }
-
 }
