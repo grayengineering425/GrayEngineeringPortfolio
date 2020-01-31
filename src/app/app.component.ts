@@ -40,9 +40,8 @@ export class AppComponent implements AfterViewInit
     this.navbar           = document.getElementsByClassName("navigation-bar"              )[0]  as HTMLElement;
     this.about            = document.getElementsByClassName("about-section"               )[0]  as HTMLElement;
     this.profile          = document.getElementsByClassName("profile-section"             )[0]  as HTMLElement;
-    this.projects         = document.getElementsByClassName("project-grid"                )[0]  as HTMLElement;
-    this.contact          = document.getElementsByClassName("main-contact-page"           )[0]  as HTMLElement;
-    this.navigationItems = document.getElementsByClassName("navigation-underline") as HTMLCollectionOf<HTMLElement>;
+    this.projects         = document.getElementsByClassName("project-section"             )[0]  as HTMLElement;
+    this.navigationItems  = document.getElementsByClassName("navigation-underline"        )     as HTMLCollectionOf<HTMLElement>;
     
 
     var that = this;
@@ -58,62 +57,60 @@ export class AppComponent implements AfterViewInit
       if (window.pageYOffset >= cutoff)  that.navbar.classList.add    ("sticky");
       else                               that.navbar.classList.remove ("sticky");
 
-      var bodyRect      = document.body .getBoundingClientRect();
-      var animationRect = that.animation.getBoundingClientRect()
-      var aboutRect     = that.about    .getBoundingClientRect();
-      var profileRect   = that.profile  .getBoundingClientRect();
-      var projectsRect  = that.projects .getBoundingClientRect();
-      var contactRect   = that.contact  .getBoundingClientRect();
+      var bodyRect      = document.body     .getBoundingClientRect();
+      var aboutRect     = that.about        .getBoundingClientRect();
+      var profileRect   = that.profile      .getBoundingClientRect();
+      var projectsRect  = that.projects     .getBoundingClientRect();
 
-      var aboutTop    = aboutRect.top     - bodyRect.top;
-      var aboutBottom = aboutRect.bottom  - bodyRect.top;
+      var screenPos = window.pageYOffset + window.innerHeight;
 
-      var profileTop    = profileRect.top    - bodyRect.top;
-      var profileBottom = profileRect.bottom - bodyRect.top;
-
-      //var aboutTop    = aboutRect.top     - bodyRect.top;
-      //var aboutBottom = aboutRect.bottom - bodyRect.top;
-
-      //var aboutTop    = aboutRect.top     - bodyRect.top;
-      //var aboutBottom = aboutRect.bottom  - bodyRect.top;
-
-
-
-      var aboutMid    = (aboutBottom    - aboutTop  ) / 2.0;
-      var profileMid  = (profileBottom  - profileTop) / 2.0;
-      //var projectsMid = (projectsRect .bottom - projectsRect.top) / 2.0;
-      //var contactMid  = (contactRect  .bottom - contactRect .top) / 2.0;
-
-      console.log(aboutMid);
-      console.log(profileMid);
-
-      if (window.pageYOffset >= aboutMid && window.pageYOffset < profileMid)
+      if (screenPos > aboutRect.top - bodyRect.top && screenPos < profileRect.top - bodyRect.top)
       {
         for (var i = 0; i < that.navigationItems.length; ++i) that.navigationItems[i].classList.remove("navigation-underline-selected");
 
         that.navigationItems[1].classList.add("navigation-underline-selected");
       }
-      else if (window.pageYOffset >= profileMid /*&& window.pageYOffset < projectsMid*/)
+      else if (screenPos > profileRect.top - bodyRect.top && screenPos < projectsRect.top - bodyRect.top)
       {
         for (var i = 0; i < that.navigationItems.length; ++i) that.navigationItems[i].classList.remove("navigation-underline-selected");
 
         that.navigationItems[2].classList.add("navigation-underline-selected");
       }
-      //else if (window.pageYOffset >= projectsMid && window.pageYOffset < contactMid)
-      //{
-      //  for (var i = 0; i < that.navigationItems.length; ++i) that.navigationItems[i].classList.remove("navigation-underline-selected");
+      else if (screenPos > projectsRect.top - bodyRect.top && screenPos)
+      {
+        for (var i = 0; i < that.navigationItems.length; ++i) that.navigationItems[i].classList.remove("navigation-underline-selected");
 
-      //  that.navigationItems[3].classList.add("navigation-underline-selected");
-      //}
-      //else if (window.pageYOffset >= contactMid)
-      //{
-      //  for (var i = 0; i < that.navigationItems.length; ++i) that.navigationItems[i].classList.remove("navigation-underline-selected");
+        that.navigationItems[3].classList.add("navigation-underline-selected");
+      }
+      else
+      {
+        for (var i = 0; i < that.navigationItems.length; ++i) that.navigationItems[i].classList.remove("navigation-underline-selected");
 
-      //  that.navigationItems[4].classList.add("navigation-underline-selected");
-      //}
+        that.navigationItems[0].classList.add("navigation-underline-selected");
+      }
     }
 
     this.projectSection     .setProjectService(this.projectService);
     this.projectDescription .setProjectService(this.projectService);
+  }
+
+  public scrollToTop(): void
+  {
+    document.querySelector('.animation-background').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  public scrollToAbout(): void
+  {
+    document.querySelector('.about-section').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  public scrollToProfile(): void
+  {
+    document.querySelector('.profile-section').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  public scrollToProjects(): void
+  {
+    document.querySelector('.project-section').scrollIntoView({ behavior: 'smooth' });
   }
 }
