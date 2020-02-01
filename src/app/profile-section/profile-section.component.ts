@@ -18,7 +18,7 @@ export class ProfileSectionComponent implements OnInit
 
   ngOnInit()
   {
-    this.percentageValues   = ["50%", "50%", "50%", "50%", "50%", "50%", "50%"];
+    this.percentageValues   = ["50%", "45%", "40%", "40%", "35%", "35%", "35%"];
     this.profileSection     = document.getElementsByClassName('profile-section' )[0];
     this.percentageElements = document.getElementsByClassName('proficiency-fill') as HTMLCollectionOf<HTMLElement>;
   }

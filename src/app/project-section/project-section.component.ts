@@ -12,7 +12,7 @@ export class ProjectSectionComponent implements OnInit {
   private projectItems  : any;
   private mediaQuery    : any;
   private projectService: ProjectService;
-  private projects      : Array<Project>;
+  public  projects      : Array<Project>;
 
   constructor(private ref: ChangeDetectorRef)
   {

@@ -42,7 +42,6 @@ export class AppComponent implements AfterViewInit
     this.profile          = document.getElementsByClassName("profile-section"             )[0]  as HTMLElement;
     this.projects         = document.getElementsByClassName("project-section"             )[0]  as HTMLElement;
     this.navigationItems  = document.getElementsByClassName("navigation-underline"        )     as HTMLCollectionOf<HTMLElement>;
-    
 
     var that = this;
 
@@ -101,16 +100,25 @@ export class AppComponent implements AfterViewInit
 
   public scrollToAbout(): void
   {
-    document.querySelector('.about-section').scrollIntoView({ behavior: 'smooth' });
+    var aboutElement  = document.querySelector('.about-section') as HTMLElement;
+    var aboutTop      = aboutElement.offsetTop - this.navbar.clientHeight;
+
+    window.scroll({ top: aboutTop, behavior: "smooth" });
   }
 
   public scrollToProfile(): void
   {
-    document.querySelector('.profile-section').scrollIntoView({ behavior: 'smooth' });
+    var profileElement  = document.querySelector('.profile-section') as HTMLElement;
+    var profileTop      = profileElement.offsetTop - this.navbar.clientHeight;
+
+    window.scroll({ top: profileTop, behavior: "smooth" });
   }
 
   public scrollToProjects(): void
   {
-    document.querySelector('.project-section').scrollIntoView({ behavior: 'smooth' });
+    var projectElement  = document.querySelector('.project-section') as HTMLElement;
+    var projectTop      = projectElement.offsetTop - this.navbar.clientHeight;
+
+    window.scroll({ top: projectTop, behavior: "smooth" });
   }
 }

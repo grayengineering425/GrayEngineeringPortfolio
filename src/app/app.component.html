@@ -1,23 +1,25 @@
 <app-main-animation></app-main-animation>
-<div class="navigation">
-  <ul class="navigation-bar">
-    <li class="navigation-bar-content" (click)="scrollToTop()">
-      <a href="#home">Home</a>
-      <div class="navigation-underline navigation-underline-selected"></div>
-    </li>
-    <li class="navigation-bar-content" (click)="scrollToAbout()">
-      <a href="#about">About</a>
-      <div class="navigation-underline"></div>
-    </li>
-    <li class="navigation-bar-content" (click)="scrollToProfile()">
-      <a href="#about">Profile</a>
-      <div class="navigation-underline"></div>
-    </li>
-    <li class="navigation-bar-content" (click)="scrollToProjects()">
-      <a href="#about">Projects</a>
-      <div class="navigation-underline"></div>
-    </li>
-  </ul>
+<div class="navigation-wrapper">
+  <div class="navigation">
+    <ul class="navigation-bar">
+      <li class="navigation-bar-content" (click)="scrollToTop()">
+        <a href="#home">Home</a>
+        <div class="navigation-underline navigation-underline-selected"></div>
+      </li>
+      <li class="navigation-bar-content" (click)="scrollToAbout()">
+        <a href="#about">About</a>
+        <div class="navigation-underline"></div>
+      </li>
+      <li class="navigation-bar-content" (click)="scrollToProfile()">
+        <a href="#about">Profile</a>
+        <div class="navigation-underline"></div>
+      </li>
+      <li class="navigation-bar-content" (click)="scrollToProjects()">
+        <a href="#about">Projects</a>
+        <div class="navigation-underline"></div>
+      </li>
+    </ul>
+  </div>
 </div>
 <app-about-section #aboutSection></app-about-section>
 <app-profile-section #profileSection></app-profile-section>
