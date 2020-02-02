@@ -43,6 +43,10 @@ export class AppComponent implements AfterViewInit
     this.projects         = document.getElementsByClassName("project-section"             )[0]  as HTMLElement;
     this.navigationItems  = document.getElementsByClassName("navigation-underline"        )     as HTMLCollectionOf<HTMLElement>;
 
+    var navigationWrapper = document.getElementsByClassName("navigation-wrapper")[0] as HTMLElement;
+
+    navigationWrapper.style.height = this.navbar.clientHeight.toString() + "px";
+
     var that = this;
 
     window.onscroll = function()

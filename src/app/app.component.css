@@ -7,7 +7,6 @@
 
 .navigation-wrapper
 {
-  height: 54px;
 }
 
 .navigation
@@ -24,12 +23,12 @@
   background-color: black;
   width:            100%;
   z-index:          1;
-  height:           54px;
 }
 
 .navigation-bar-content
 {
-  display:inline-block;
+  display:  inline-block;
+  cursor:   pointer;
 }
 
 .navigation-bar-content a

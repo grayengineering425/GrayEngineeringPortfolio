@@ -44,9 +44,12 @@
 
 .project-image
 {
-  height:           60%;
-  width:            100%;
-  background-color: #D2D2D2;
+  height:               60%;
+  width:                100%;
+  background-color:     #D2D2D2;
+  -webkit-user-select:  none;
+  -moz-user-select:     none;
+  user-select:          none;
 }
 
 .project-summary
