@@ -1,16 +1,16 @@
 .top-contact-page
 {
-  position: relative;
+  position:       relative;
   width:          0;
   height:         0;
   border-left:    50vw solid transparent;
   border-right:   50vw solid transparent;
-  border-bottom:  100px solid #EBEBEB;
+  border-bottom:  7vw solid #EBEBEB;
 }
 
 .main-contact-page
 {
-  width:            100%;
+  width:            100vw;
   height:           350px;
   background-color: #EBEBEB;
   text-align:       center;
@@ -46,7 +46,7 @@
 
 .footer
 {
-  width:            100%;
+  width:            100vw;
   height:           200px;
   background-color: #D2D2D2;
 }

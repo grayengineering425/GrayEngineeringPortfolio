@@ -120,7 +120,7 @@
 {
   .project-section
   {
-    max-width:  100%;
+    max-width:  100vh;
     height:     300vh;
     text-align: center;
   }
@@ -131,7 +131,7 @@
     margin:           0 auto;
     overflow:         hidden;
     display:          block;
-    width:            100%;
+    width:            100vh;
     height:           100%;
     margin:           0;
     padding:          0;
@@ -140,7 +140,7 @@
   .project-item
   {
     height:           50vh;
-    width:            100%;
+    width:            100vh;
     display:          inline-block;
     background-color: pink;
     opacity:          0.0;
