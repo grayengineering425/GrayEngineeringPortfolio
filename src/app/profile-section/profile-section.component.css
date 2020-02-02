@@ -4,7 +4,6 @@
   margin:             0;
   text-align:         center;
   background-color: 	#EBEBEB;
-  min-height:         100vh;
   overflow-y:         hidden;
 }
 
@@ -35,7 +34,7 @@
   justify-content:  center;
   max-width:        1280px;
   max-height:       1000px;
-  padding-bottom:   15vh;
+  padding-bottom:   10vh;
 }
 
 .profile-picture
@@ -83,51 +82,6 @@
   margin:           8px;
 }
 
-@media screen
-  and (max-device-width: 1440px)
-{
-  .picture-percentage-section
-  {
-    display:          flex;
-    flex-direction:   column;
-    margin:           80px auto;
-    justify-content:  center;
-    max-width:        900px;
-    max-height:       1000px;
-    padding-bottom:   5%;
-  }
-  
-  .profile-picture
-  {
-    margin-right:       30%;
-    margin-left:        30%;
-    border-radius:      50%;
-    flex-grow:          1;
-    background-color:   gray;
-  }
-  
-  .proficiency-list
-  {
-    flex-grow:          2;
-    list-style:         none;
-    display:            flex;
-    flex-direction:     column;
-    padding:            8px;
-    margin-top:         5%;
-    margin-left:        15%;
-    margin-right:       15%;
-  }
-  
-  .proficiency-bar
-  {
-    width:            99%;
-    height:           30px;
-    flex:             1 1 auto;
-    background-color: #bfbfbf;
-    margin:           8px;
-  }
-}
-
 .proficiency-title
 {
   float:            left;
@@ -169,10 +123,8 @@
   display:          flex;
   flex-direction:   row;
   justify-content:  center;
-  padding:          15px;
-  padding-top:      70px;
-  padding-bottom:   70px;
-  height:           150px;
+  padding-top:      5%;
+  padding-bottom:   8%;
 }
 
 .certification-underline
@@ -255,4 +207,102 @@
   border-top:   40px solid #6C6;
   border-left:  62px solid transparent;
   border-right: 62px solid transparent;
+}
+
+@media screen
+  and (max-device-width: 1440px)
+{
+  .picture-percentage-section
+  {
+    display:          flex;
+    flex-direction:   column;
+    margin:           80px auto;
+    justify-content:  center;
+    max-height:       1000px;
+    padding-bottom:   0%;
+  }
+  
+  .profile-picture
+  {
+    margin-right:       10%;
+    margin-left:        10%;
+    border-radius:      50%;
+    flex-grow:          1;
+    background-color:   gray;
+  }
+  
+  .proficiency-list
+  {
+    flex-grow:          2;
+    list-style:         none;
+    display:            flex;
+    flex-direction:     column;
+    padding:            4px;
+    margin-top:         5%;
+    margin-left:        5%;
+    margin-right:       5%;
+  }
+  
+  .proficiency-bar
+  {
+    width:            99%;
+    height:           30px;
+    flex:             1 1 auto;
+    background-color: #bfbfbf;
+    margin:           4px;
+  }
+
+  .certification-top
+  {
+    width:          0;
+    border-bottom:  15px solid #6C6;
+    border-left:    26px solid transparent;
+    border-right:   26px solid transparent;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .certification-middle
+  {
+    width:            52px;
+    height:           30px;
+    background-color: #6C6;
+  
+    transition: all 0.3s ease;
+  }
+
+  .certification-bottom
+  {
+  width:        0;
+  border-top:   15px solid #6C6;
+  border-left:  26px solid transparent;
+  border-right: 26px solid transparent;
+
+  transition: all 0.3s ease;
+  }
+
+  .certification
+  {
+    margin: 7.5px;
+  }
+
+  .certification:hover .certification-top
+  {
+    border-bottom:  15px solid #6C6;
+    border-left:    26px solid transparent;
+    border-right:   26px solid transparent;
+  }
+  
+  .certification:hover .certification-middle
+  {
+    width:            52px;
+    height:           30px;
+  }
+  
+  .certification:hover .certification-bottom
+  {
+    border-top:   15px solid #6C6;
+    border-left:  26px solid transparent;
+    border-right: 26px solid transparent;
+  }
 }

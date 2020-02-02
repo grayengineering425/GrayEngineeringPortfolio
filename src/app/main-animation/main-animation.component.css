@@ -26,8 +26,8 @@ html, body
 .header-content h2
 {
   text-align:     center;
-  font-size:      50px;
-  padding-top:    20%;
+  font-size:      3vh;
+  padding-top:    30%;
   color:          white;
   padding-bottom: 30px;
   cursor:         default;
@@ -41,7 +41,7 @@ html, body
 .main-page-button
 {
   height:           64px;
-  width:            256px;
+  width:            196px;
   margin:           0 auto;
   display:          flex;
   align-items:      center;
@@ -53,6 +53,26 @@ html, body
   transition:       all 0.5s ease;
 }
 
+@media screen
+  and (max-device-width: 1440px)
+{
+
+  .main-page-button
+  {
+    height:           54px;
+    width:            140px;
+    margin:           0 auto;
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    border-style:     solid;
+    border-width:     2px;
+    border-color:     white;
+    color:            white;
+    transition:       all 0.5s ease;
+  }
+}
+
 .main-page-button p
 {
   padding-right:  10px;
@@ -61,7 +81,6 @@ html, body
 
 .main-page-button i
 {
-  font-size:      20px;
   transition:     all 0.5s ease;
   color:          white;
 }

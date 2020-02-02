@@ -115,12 +115,12 @@
   opacity: 1.0;
 }
 
-@media screen
+/*@media screen
   and (max-device-width: 1440px)
 {
   .project-section
   {
-    max-width:  100vh;
+    max-width:  100vw;
     height:     300vh;
     text-align: center;
   }
@@ -140,7 +140,7 @@
   .project-item
   {
     height:           50vh;
-    width:            100vh;
+    width:            100vw;
     display:          inline-block;
     background-color: pink;
     opacity:          0.0;
@@ -175,4 +175,4 @@
   .project-item-visible
   {
   }
-}
+}*/

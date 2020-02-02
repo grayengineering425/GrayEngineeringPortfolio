@@ -30,10 +30,10 @@
   transition:       all 0.4s ease;
 }
 
-  .contact-container:hover
-  {
-    color: #ff3399;
-  }
+.contact-container:hover
+{
+  color: #ff3399;
+}
 
 .return-to-top
 {
@@ -63,4 +63,12 @@
 .name
 {
   color:#ff3399;
+}
+
+@media screen and (max-device-width: 1440px) {
+
+  .contact-header
+  {
+    padding-top: 15%;
+  }
 }
