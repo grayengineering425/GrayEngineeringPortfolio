@@ -2,13 +2,14 @@
 {
   padding:            0;
   margin:             0;
+  height:             100vh;
   text-align:         center;
   overflow-y:         hidden;
 }
 
 .section-header
 {
-  padding-top: 3%;
+  padding-top: 5%;
 }
 
 .section-header h2
@@ -107,7 +108,7 @@
   height:           100%;
   width:            0%;
   display:          inline-block;
-  transition:       all 2s ease;
+  transition:       all 2s 0.5s ease;
 }
 
 .proficiency-percentage
@@ -211,10 +212,14 @@
 @media screen
   and (max-device-width: 1440px)
 {
+  .profile-section
+  {
+    height: auto;
+  }
+
   .section-header h2
   {
     font-size: 28px;
-    
   }
 
   .profile-header-underline

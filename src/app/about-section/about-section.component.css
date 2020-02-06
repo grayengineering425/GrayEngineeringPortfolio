@@ -16,7 +16,7 @@
 {
   height:       100%;
   transform:    translate(-100vw, 0);
-  transition:   transform 2s 0s;
+  transition:   transform 2s 0.5s;
 }
 
 .about-text
@@ -44,7 +44,7 @@
   width:        100%;
   height:       100%;
   transform:    translate(100vw, 0);
-  transition:   transform 2s 0s;
+  transition:   transform 2s 0.5s;
 }
 
 .passionate-section
@@ -59,7 +59,7 @@
   width:        100%;
   height:       100%;
   transform:    translate(-100vw, 0%);
-  transition:   transform 2s 0s;
+  transition:   transform 2s 0.3s;
 }
 
 .section-divider
