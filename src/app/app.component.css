@@ -67,3 +67,7 @@
   top:      0;
   width:    100%;
 }
+
+@media screen and (max-device-width: 1440px)
+{
+}
