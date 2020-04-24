@@ -58,10 +58,10 @@ export class ProjectService
     var link3       = "https://www.usa.philips.com/healthcare/resources/landing/intrasight";
     var p3          = new Project("Philips Intrasight", summary3, imagePath3, link3);
 
-    var summary4    = "Created a home automation system using Angular, Python, and C++. Used artificial intelligence to automate household tasks and install a modern security system in my house.";
-    var imagePath4  = "assets/home-automation.svg";
-    var link4       = "https://github.com/grayengineering425/HomeAiAutomation";
-    var p4          = new Project("Home Automation", summary4, imagePath4, link4);
+    var summary4    = "Created a Slack bot using python and AWS to automatically create Spotify playlists and archive songs posted in channels.";
+    var imagePath4  = "assets/bot.svg";
+    var link4       = "https://github.com/grayengineering425/MusicBot";
+    var p4          = new Project("Music Bot", summary4, imagePath4, link4);
 
     var summary5    = "Created this website! Check out the source code!";
     var imagePath5  = "assets/website.svg";
