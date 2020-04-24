@@ -55,6 +55,11 @@
 	width:            90%;
 }
 
+.navigation-bar-content:hover a
+{
+	color: white;
+}
+
 .navigation-underline-selected
 {
 	background-color: white;

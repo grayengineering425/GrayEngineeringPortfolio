@@ -44,6 +44,12 @@
   flex:               1 0;
 }
 
+.face
+{
+  height: 500px;
+  width:  500px; 
+}
+
 .proficiency-list
 {
   flex-grow:          2;
@@ -209,6 +215,12 @@
     width:            65px;
   }
 
+  .face
+  {
+    height: 300px;
+    width:  300px;
+  }
+
   .certification-header
   {
     font-size: 16px;
@@ -234,9 +246,7 @@
   {
     margin-right:       10%;
     margin-left:        10%;
-    border-radius:      50%;
     flex-grow:          1;
-    background-color:   gray;
   }
   
   .proficiency-list
